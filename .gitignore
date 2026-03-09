@@ -1,0 +1,35 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Data (too large for git)
+data/
+
+# Models (tracked by MLflow, not git)
+models/
+
+# Environment variables
+.env
+*.env
+
+# Mac
+.DS_Store
+
+# Docker
+*.dockerignore
+
+# IDE
+.vscode/
+.idea/
