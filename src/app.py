@@ -8,11 +8,19 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # ── Load model & features at startup ─────────────────────────────
-MODEL_NAME = "churn-model"
+'''MODEL_NAME = "churn-model"
 MODEL_VERSION = "1"
 
 print(f"Loading model: {MODEL_NAME} v{MODEL_VERSION}...")
-model = mlflow.sklearn.load_model(f"models:/{MODEL_NAME}/{MODEL_VERSION}")
+model = mlflow.sklearn.load_model(f"models:/{MODEL_NAME}/{MODEL_VERSION}")'''
+
+import pickle
+
+print("Loading model from local path...")
+with open("models/churn_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+print("Model loaded!")
 
 with open("models/feature_columns.json") as f:
     FEATURE_COLUMNS = json.load(f)
