@@ -4,3 +4,5 @@ mlflow
 pandas
 scikit-learn
 numpy
+streamlit
+requests
